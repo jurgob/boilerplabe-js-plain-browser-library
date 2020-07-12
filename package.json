@@ -1,5 +1,6 @@
 {
-  "name": "boilerplabe-js-plain-browser-libraryconversation-js-sdk-redux",
+  "name": "my-module",
+  "main": "dist/index.js",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
