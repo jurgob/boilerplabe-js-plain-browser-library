@@ -1,0 +1,97 @@
+{
+  "name": "boilerplabe-js-plain-browser-libraryconversation-js-sdk-redux",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.19.2"
+  },
+  "scripts": {
+    "test": "jest src",
+    "build": "babel src --out-dir dist",
+    "lint": "eslint --ext .js src",
+    "lint:fix": "eslint --ext .js --fix src"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier",
+      "jest"
+    ],
+    "rules": {
+      "semi": 0,
+      "prettier/prettier": [
+        "error",
+        {
+          "semi": false
+        }
+      ]
+    },
+    "env": {
+      "jest": true
+    },
+    "ignorePatterns": [
+      "/dist/*.js"
+    ]
+  },
+  "prettier": {
+    "printWidth": 90,
+    "bracketSpacing": false,
+    "trailingComma": "es5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.+(js)": [
+      "npm run lint:fix",
+      "git add"
+    ],
+    "*.+(json|css|md)": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js?$": "babel-jest"
+    }
+  },
+  "babel": {
+    "presets": [
+      "airbnb"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.4",
+    "@babel/core": "^7.10.4",
+    "babel-jest": "^26.1.0",
+    "babel-preset-airbnb": "^5.0.0",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.18.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "jest": "^26.1.0",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5"
+  }
+}
