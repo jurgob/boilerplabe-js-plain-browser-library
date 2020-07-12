@@ -1,4 +1,4 @@
-# -boilerplabe-js-plain-browser-library
+# boilerplabe-js-plain-browser-library
 
 ## What is this?
 I did a boilerplate for writing boilerplate for npm library targetting browsers. 
